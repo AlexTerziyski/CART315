@@ -1,6 +1,6 @@
-Journal-W01-MakeaThing
+# Journal-W01-MakeaThing
 
-Make-a-Thing: Design Reflection
+## Make-a-Thing: Design Reflection; January 23rd, 2025
 
 For my "Make-a-Thing" project, I created a very short text-based game using Ink, a narrative scripting language. The game is simple, but using something new like Ink is always a cool experience.
 
@@ -17,12 +17,12 @@ Quick Syntax Notes:
 ->: Directs the flow to a specific section.
 ===: Marks the start of a new section.
 *: Creates a choice.
-* *: Adds a sub-choice.
+**: Adds a sub-choice.
 --: Non-branching outcomes.
 -> DONE: Ends a sequence or path.
 -> END: Ends the story completely.
 Here’s a screenshot of Ink’s interface and the short game interaction I made:
 
-￼
+
 
 #Play tested in-class and people liked it more than expected. It was just something to get started with, so I will expand on it in the future.
