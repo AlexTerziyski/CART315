@@ -21,8 +21,9 @@ Quick Syntax Notes:
 --: Non-branching outcomes.
 -> DONE: Ends a sequence or path.
 -> END: Ends the story completely.
-Here’s a screenshot of Ink’s interface and the short game interaction I made:
 
+Here’s a screenshot of Ink’s interface and the short game interaction I made:
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/InklePhoto.png)
 
 
 #Play tested in-class and people liked it more than expected. It was just something to get started with, so I will expand on it in the future.
