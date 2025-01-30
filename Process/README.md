@@ -42,5 +42,9 @@ Scripting the game manager was trickier than expected. Managing states like star
 Reflection:
 Even though it’s just a basic prototype, this project helped me get more comfortable with Unity and C#. I learned how to structure my scripts better and troubleshoot issues more effectively. Next time, I want to refine the UI elements and add more interaction to make the game feel more polished.
 
+It's a jumping game where you click to jump over an obstacle, if you get hit, the game ends and you can restart the game to play again. There is also a point system that adds 10 points everytime you succesfully jump over the object.
+
 Here's a short gif of the game:
+
+
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype1.gif)
