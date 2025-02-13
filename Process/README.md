@@ -70,6 +70,22 @@ This week, I continued to explore Unity’s scripting system, and I’m starting
 # Journal-W04-Prototype3
 ## Prototype 3: Design Reflection; February 13th, 2025
 
+For this week's Prototype 3 project, I expanded upon the Breakout game by implementing a power-up system and UI display features. The main focus was on creating different types of special bricks that would affect gameplay elements like paddle size, ball speed, and lives when destroyed.
+
+What Worked:
+The implementation of different power-up bricks worked successfully after some refinement. I created three distinct power-up types (ExtendPaddle, SpeedUp, and ExtraLife) that spawn randomly among the regular bricks using a percentage-based system. The BrickLayerManager script now successfully generates a mix of regular and power-up bricks at the start of each game, adding variety to the gameplay.
+
+The UI display system was also implemented effectively, showing real-time updates of important game statistics including lives, ball speed, paddle size, and score. This addition helps players track their progress and understand the effects of different power-ups during gameplay.
+
+What Didn't Work:
+Initially, I faced several challenges with the power-up brick implementation. The first version had the power-up bricks falling down due to an unnecessary fallSpeed variable in the script, which wasn't the intended behavior for stationary bricks. Additionally, there were issues with collision detection between the ball and power-up bricks, which was resolved by properly implementing both OnCollisionEnter2D and OnTriggerEnter2D methods and ensuring the ball object had the correct tag assigned.
+
+Another challenge was getting the power-up effects to work correctly. Initially, all power-up bricks were triggering the same effect (paddle extension) regardless of their type. This was fixed by properly assigning the correct PowerUpType to each prefab in the Unity Inspector and ensuring the switch statement in the ApplyPowerUp method was properly implemented.
+
+Reflection:
+This week's prototype helped me better understand Unity's collision system and the importance of proper object tagging and prefab configuration. The implementation of the power-up system demonstrated how small additions can significantly impact gameplay variety. The UI system showed me how to effectively communicate game state to players.
+
+For future implementations, I'd like to add more sophisticated power-up effects, perhaps including negative effects that could add challenge to the game. I'm also interested in implementing a proper scoring system that takes into account different brick types and potentially adding a high score feature. Additionally, creating a more polished visual feedback system for power-up effects would enhance the player experience.
 
 
 
