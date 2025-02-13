@@ -66,3 +66,11 @@ This week, I continued to explore Unity’s scripting system, and I’m starting
 
 
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype2.gif)
+
+# Journal-W04-Prototype3
+## Prototype 2: Design Reflection; February 13th, 2025
+
+
+
+
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype3.gif)
