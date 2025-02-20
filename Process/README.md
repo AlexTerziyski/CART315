@@ -92,3 +92,20 @@ For future implementations, I'd like to add more sophisticated power-up effects,
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype3.gif)
 # Journal-W05-Prototype4
 ## Prototype 4 (Continuation of Prototype 3): Design Reflection; February 20th, 2025
+
+This week, I continued developing my Breakout-style game by attempting to implement power-up mechanics. The main focus was trying to add a MultiBall power-up that would spawn additional balls when specific bricks are hit. While the concept seemed straightforward initially, I encountered several challenges during implementation that I haven't fully resolved yet.
+
+The main hurdle was properly spawning the additional balls. My initial approach of trying to clone the existing ball led to complications with ball properties and behaviors. While I was able to get the power-up bricks to register hits and trigger debug messages, the actual spawning of new balls isn't functioning as intended. Based on troubleshooting and research, I believe creating a dedicated MultiBall prefab might be a more effective solution, giving better control over the spawned balls' properties such as size, color, and physics behavior. This will be my next approach when I continue working on this feature.
+
+I also worked on ensuring game over conditions work properly, preventing lives from going negative and implementing a basic game end state. While there's still work to be done on the power-up system, these fundamental gameplay improvements help create a more polished base experience.
+
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype3.png)
+
+Extra Credit: Game Analysis
+The Binding of Isaac's procedural generation system offers valuable insights into effective game design. What makes it particularly interesting is how it balances randomization with carefully structured patterns. While each run feels unique, the game maintains consistency through predetermined room layouts and item pools tied to specific locations.
+
+The designers succeeded in creating variety without chaos - rooms are randomly selected but follow specific rules about enemy placement, item availability, and overall difficulty progression. This creates an experience that feels fresh each time while remaining fair and learnable.
+
+Where some roguelikes fail with pure randomness, Isaac succeeds by implementing "controlled randomness." This approach ensures that while players never know exactly what they'll encounter, they can develop strategies based on consistent underlying systems.
+
+For my future projects, I'm inspired to implement similar principles of controlled variability. Rather than pure randomization, I could create systems where elements vary within defined parameters - perhaps power-ups that appear in specific patterns but with randomized timing, or level layouts that combine pre-designed segments in different ways. This would help create replayable experiences while maintaining game balance and design integrity.
