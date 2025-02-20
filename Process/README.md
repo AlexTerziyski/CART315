@@ -99,7 +99,7 @@ The main hurdle was properly spawning the additional balls. My initial approach 
 
 I also worked on ensuring game over conditions work properly, preventing lives from going negative and implementing a basic game end state. While there's still work to be done on the power-up system, these fundamental gameplay improvements help create a more polished base experience.
 
-![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype3.png)
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype4.png)
 
 Extra Credit: Game Analysis
 The Binding of Isaac's procedural generation system offers valuable insights into effective game design. What makes it particularly interesting is how it balances randomization with carefully structured patterns. While each run feels unique, the game maintains consistency through predetermined room layouts and item pools tied to specific locations.
