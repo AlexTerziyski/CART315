@@ -12,52 +12,66 @@ public class BreakoutBall : MonoBehaviour
     public float minSpeed = 2f;
 
     public AudioSource scoreSound, blip;
-    
-    
-    private int[] dirOptions = {-1, 1};
-    private int   hDir;
+
+
+    private int[] dirOptions = { -1, 1 };
+    private int hDir;
 
     private bool gameRunning;
-    
+
+    public bool canLoseLife = true;
+
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
-        Reset(); 
+        Reset();
     }
-    
-    void Update() {
+
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && !gameRunning) StartCoroutine(Launch());
     }
 
 
     // Start the Ball Moving
-    private IEnumerator Launch() {
+    private IEnumerator Launch()
+    {
         gameRunning = true;
         //yield return new WaitForSeconds(1.5f);
-        
+
         // Figure out directions
         hDir = dirOptions[Random.Range(0, dirOptions.Length)];
-        
+
         // Add a horizontal force
         rb.AddForce(transform.right * ballSpeed * hDir); // Randomly go Left or Right
         // Add a vertical force
         rb.AddForce(transform.up * -1f);
-        
+
         yield return null;
     }
 
-    public void Reset() {
+    public void Reset()
+    {
+        if (!canLoseLife)
+        {
+            // Destroy the small balls when they hit the bottom
+            Destroy(gameObject);
+            return;
+        }
+
+        // Normal reset for main ball
         rb.linearVelocity = Vector2.zero;
         ballSpeed = 2;
         transform.position = new Vector2(0, 0);
         gameRunning = false;
     }
-    
+
     // if the ball goes out of bounds
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
-        
+
+
         // did we hit a wall?
         if (other.gameObject.tag == "Wall")
         {
@@ -75,17 +89,18 @@ public class BreakoutBall : MonoBehaviour
             blip.Play();
             SpeedCheck();
         }
-        
+
         // did we hit the Bottom
-        if (other.gameObject.tag == "Reset")
+        if (other.gameObject.tag == "Reset" && canLoseLife)  // Added the canLoseLife check
         {
             //GameManager.S.lives -= 1;
             GameManager.S.LoseLife();
             Reset();
         }
-        
+
         // did we hit a Brick
-        if (other.gameObject.tag == "Brick") {
+        if (other.gameObject.tag == "Brick")
+        {
             int r = Random.Range(10, 20);
             //GameManager.S.lives -= 1;
             GameManager.S.AddPoint(r);
@@ -93,8 +108,9 @@ public class BreakoutBall : MonoBehaviour
         }
     }
 
-    private void SpeedCheck() {
-        
+    private void SpeedCheck()
+    {
+
         // Prevent ball from going too fast
         if (Mathf.Abs(rb.linearVelocity.x) > maxSpeed) rb.linearVelocity = new Vector2(rb.linearVelocity.x * 0.99f, rb.linearVelocity.y);
         if (Mathf.Abs(rb.linearVelocity.y) > maxSpeed) rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.99f);
@@ -113,16 +129,18 @@ public class BreakoutBall : MonoBehaviour
 
 
         // Prevent too shallow of an angle
-        if (Mathf.Abs(rb.linearVelocity.x) < minSpeed) {
+        if (Mathf.Abs(rb.linearVelocity.x) < minSpeed)
+        {
             // shorthand to check for existing direction
             rb.linearVelocity = new Vector2((rb.linearVelocity.x < 0) ? -minSpeed : minSpeed, rb.linearVelocity.y);
         }
 
-        if (Mathf.Abs(rb.linearVelocity.y) < minSpeed) {
+        if (Mathf.Abs(rb.linearVelocity.y) < minSpeed)
+        {
             // shorthand to check for existing direction
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, (rb.linearVelocity.y < 0) ? -minSpeed : minSpeed);
         }
-        
+
         Debug.Log(rb.linearVelocity);
 
     }

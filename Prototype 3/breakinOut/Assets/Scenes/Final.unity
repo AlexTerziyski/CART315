@@ -615,6 +615,7 @@ MonoBehaviour:
   - {fileID: 1084839915812565072, guid: ed3ab15a2abbc43ae8d9d155ef1bdebf, type: 3}
   - {fileID: 362869701162349102, guid: b8ffab7ee4f10483791377668708bd79, type: 3}
   - {fileID: 5019490785980891558, guid: ca9bc1682f0f745438f4a7439d846d6f, type: 3}
+  - {fileID: 1084839915812565072, guid: d8df22a17bdda4c979e8feaa3f2e2695, type: 3}
   rows: 4
   columns: 8
   brickSpacing_h: 2.5

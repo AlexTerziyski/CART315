@@ -38,11 +38,26 @@ public class GameManager : MonoBehaviour
 
     public void LoseLife()
     {
-        lives -= 1;
+        lives--;
         heartImage.fillAmount = (lives * .2f);
-        UpdateUI(); // Update UI when life is lost
+
+        // Check if game over
+        if (lives <= 0)
+        {
+            lives = 0;  // Prevent negative lives
+                        // Add your game over logic here
+            GameOver();
+        }
     }
 
+    private void GameOver()
+    {
+        // Pause the game
+        Time.timeScale = 0;
+
+        // Optional: Print game over message to console
+        Debug.Log("Game Over!");
+    }
     public void AddPoint(int numPoints)
     {
         points += numPoints;
