@@ -90,3 +90,5 @@ For future implementations, I'd like to add more sophisticated power-up effects,
 
 
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype3.gif)
+# Journal-W04-Prototype4
+## Prototype 4 (Continuation of Prototype 3): Design Reflection; February 20th, 2025
