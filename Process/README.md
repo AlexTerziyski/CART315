@@ -109,3 +109,6 @@ The designers succeeded in creating variety without chaos - rooms are randomly s
 Where some roguelikes fail with pure randomness, Isaac succeeds by implementing "controlled randomness." This approach ensures that while players never know exactly what they'll encounter, they can develop strategies based on consistent underlying systems.
 
 For my future projects, I'm inspired to implement similar principles of controlled variability. Rather than pure randomization, I could create systems where elements vary within defined parameters - perhaps power-ups that appear in specific patterns but with randomized timing, or level layouts that combine pre-designed segments in different ways. This would help create replayable experiences while maintaining game balance and design integrity.
+
+# Journal-W06-Iterative Prototyping 1 (Conceptualizing)
+## Iterative Prototyping 1 (Conceptualizing): Design Reflection; March 6th, 2025
