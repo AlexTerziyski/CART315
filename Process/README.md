@@ -112,3 +112,60 @@ For my future projects, I'm inspired to implement similar principles of controll
 
 # Journal-W06-Iterative Prototyping 1 (Conceptualizing)
 ## Iterative Prototyping 1 (Conceptualizing): Design Reflection; March 6th, 2025
+Design Values
+Throughout my ideation, I focused on these core design values:
+Strategic Depth: Games that reward planning and forethought
+Accessibility: Easy to learn but difficult to master
+Replayability: Different experience each playthrough
+Elegance: Simple rules that create complex gameplay
+
+Precedents
+My thinking was influenced by:
+Chess and its variations (particularly mini-chess variants)
+Roguelike games with their procedural generation
+Puzzle games like Hive and Onitama
+Auto-battlers that use randomized elements
+
+Top 3 Ideas
+
+1. Geo-Battleship: A geography-based battleship game where players must answer trivia questions about countries or regions to make shots. Correct answers allow for precise targeting, while incorrect answers result in random shots. This combines educational content with the classic battleship mechanic.
+
+2. Chess Puzzle Evolution: A 5x5 chess variant where players start with randomly generated pieces. When capturing an opponent's piece, your piece transforms into the captured piece (but remains your color). This creates an ever-evolving strategic puzzle where your available moves constantly change.
+
+3. Recipe Rush: A cooking-themed puzzle game similar to 2048, where players drag and combine ingredients on a grid to create increasingly complex recipes. Different combinations create different dishes, with players racing against time or competing for the most elaborate creations.
+
+Initial Prototype
+I decided to focus on the Chess Puzzle Evolution concept, creating a look/feel prototype using Photoshop to visualize the game board and piece transformations. 
+
+Goals of the Prototype:
+Visualize how the 5x5 board would look compared to standard chess
+Illustrate the piece transformation mechanic after captures
+Explore different visual cues to help players track piece movements and abilities
+
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype1.png)
+
+Prototype Format:
+I created a series of mockup screens showing:
+The initial board setup with randomly generated pieces
+A visualization of a move sequence
+The transformation effect when a piece captures another
+The end-game state
+
+Fidelity Level:
+This was a medium-fidelity visual prototype focusing on the look and feel rather than implementation. I used simplified chess piece designs but paid attention to how color and visual effects could communicate the transformation mechanic clearly to players.
+
+What I Learned
+Creating this visual prototype helped me realize:
+The 5x5 board creates a more condensed, faster-paced experience than traditional chess
+The transformation mechanic creates interesting strategic decisions about which pieces to capture
+Clear visual feedback is essential for players to track their pieces' changing abilities
+Random initial setups need some constraints to ensure balanced gameplay
+
+Next Steps
+For my next iteration, I plan to:
+Create a physical paper prototype to test the actual gameplay
+Develop rules for the random generation of starting pieces to ensure balanced games
+Test different board sizes (4x4 vs 5x5) to find the optimal complexity
+Explore simplified movement rules for pieces to make the game more accessible to non-chess players
+
+The look/feel prototype was valuable for visualizing the concept, but now I need to test if the core mechanics create engaging gameplay through a role prototype with actual moves and captures.
