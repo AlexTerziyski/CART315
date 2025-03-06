@@ -114,16 +114,24 @@ For my future projects, I'm inspired to implement similar principles of controll
 ## Iterative Prototyping 1 (Conceptualizing): Design Reflection; March 6th, 2025
 Design Values
 Throughout my ideation, I focused on these core design values:
+
 Strategic Depth: Games that reward planning and forethought
+
+
 Accessibility: Easy to learn but difficult to master
+
 Replayability: Different experience each playthrough
 Elegance: Simple rules that create complex gameplay
 
 Precedents
 My thinking was influenced by:
+
 Chess and its variations (particularly mini-chess variants)
+
 Roguelike games with their procedural generation
+
 Puzzle games like Hive and Onitama
+
 Auto-battlers that use randomized elements
 
 Top 3 Ideas
@@ -163,9 +171,13 @@ Random initial setups need some constraints to ensure balanced gameplay
 
 Next Steps
 For my next iteration, I plan to:
+
 Create a physical paper prototype to test the actual gameplay
+
 Develop rules for the random generation of starting pieces to ensure balanced games
+
 Test different board sizes (4x4 vs 5x5) to find the optimal complexity
+
 Explore simplified movement rules for pieces to make the game more accessible to non-chess players
 
 The look/feel prototype was valuable for visualizing the concept, but now I need to test if the core mechanics create engaging gameplay through a role prototype with actual moves and captures.
