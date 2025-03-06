@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     [SerializeField] private PowerUpType type;
+    [SerializeField] private GameObject multiBallPrefab;
 
     public enum PowerUpType
     {
@@ -95,50 +96,41 @@ public class PowerUp : MonoBehaviour
 
     private void SpawnMultiBall()
     {
-        // Find the original ball prefab
-        GameObject originalBall = GameObject.FindGameObjectWithTag("Ball");
-        if (originalBall != null)
+        if (multiBallPrefab != null)
         {
-            Debug.Log("Found original ball, creating multi balls");
+            Debug.Log("Attempting to spawn multi balls");
 
-            // Create two new balls at center of screen
-            Vector3 centerPosition = new Vector3(0, 0, 0);
+            // Spawn two balls at slightly offset positions
+            Vector3 centerPos = new Vector3(0, 0, 0);
+            Vector3 leftPos = centerPos + new Vector3(-0.5f, 0, 0);
+            Vector3 rightPos = centerPos + new Vector3(0.5f, 0, 0);
 
-            // Spawn first ball
-            GameObject newBall1 = Instantiate(originalBall, centerPosition, Quaternion.identity);
-            SetupMultiBall(newBall1, new Vector2(-0.5f, -1f));  // Goes left and down
+            // Create the balls
+            GameObject ball1 = Instantiate(multiBallPrefab, leftPos, Quaternion.identity);
+            GameObject ball2 = Instantiate(multiBallPrefab, rightPos, Quaternion.identity);
 
-            // Spawn second ball
-            GameObject newBall2 = Instantiate(originalBall, centerPosition, Quaternion.identity);
-            SetupMultiBall(newBall2, new Vector2(0.5f, -1f));   // Goes right and down
+            // Setup their movement
+            SetupMultiBall(ball1, new Vector2(-0.5f, -1f));
+            SetupMultiBall(ball2, new Vector2(0.5f, -1f));
+
+            Debug.Log("Multi balls spawned");
+        }
+        else
+        {
+            Debug.LogError("MultiBall prefab is not assigned!");
         }
     }
+
     private void SetupMultiBall(GameObject ball, Vector2 direction)
     {
-        Debug.Log("Setting up multi ball");
-
-        // Make it smaller
-        ball.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-
-        // Make it gray
-        SpriteRenderer renderer = ball.GetComponent<SpriteRenderer>();
-        if (renderer != null)
-        {
-            renderer.color = Color.gray;
-        }
-
-        // Set up physics and properties
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
         BreakoutBall ballScript = ball.GetComponent<BreakoutBall>();
 
         if (rb != null && ballScript != null)
         {
-            ballScript.canLoseLife = false;  // Won't affect lives
-
-            // Set velocity
-            float speed = 5f;  // Fixed speed for multi balls
+            ballScript.canLoseLife = false;
+            float speed = 5f;
             rb.linearVelocity = direction.normalized * speed;
-
             Debug.Log($"Ball velocity set to: {rb.linearVelocity}");
         }
     }

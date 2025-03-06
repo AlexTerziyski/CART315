@@ -101,7 +101,7 @@ I also worked on ensuring game over conditions work properly, preventing lives f
 
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/Prototype4.png)
 
-Extra Credit: Game Analysis
+## Extra Credit: Game Analysis; February 20th, 2025
 The Binding of Isaac's procedural generation system offers valuable insights into effective game design. What makes it particularly interesting is how it balances randomization with carefully structured patterns. While each run feels unique, the game maintains consistency through predetermined room layouts and item pools tied to specific locations.
 
 The designers succeeded in creating variety without chaos - rooms are randomly selected but follow specific rules about enemy placement, item availability, and overall difficulty progression. This creates an experience that feels fresh each time while remaining fair and learnable.
