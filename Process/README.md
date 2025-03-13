@@ -164,3 +164,6 @@ Next Steps - For my next iteration, I plan to:
 - Test different board sizes (7x7 vs 5x5) to find the optimal complexity
 - Explore simplified movement rules for pieces to make the game more accessible to non-chess players
 - The look/feel prototype was valuable for visualizing the concept, but now I need to test if the core mechanics create engaging gameplay through a role prototype with actual moves and captures.
+
+# Journal-W07-Iterative Prototyping 2 
+## Iterative Prototyping 2: Design Reflection; March 13th, 2025
