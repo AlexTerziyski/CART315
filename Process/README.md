@@ -170,13 +170,13 @@ Next Steps - For my next iteration, I plan to:
 
 This week, I focused on developing the core functionality for my chess puzzle game. My primary goal was to establish the fundamental mechanics that would serve as the foundation for the entire experience. I concentrated on implementing several critical chess elements:
 
-Piece Movement: I created scripts to handle the unique movement patterns for each chess piece (pawns, knights, bishops, rooks, queens, and kings). This required translating the traditional chess rules into code while adapting them for my smaller board size.
+- Piece Movement: I created scripts to handle the unique movement patterns for each chess piece (pawns, knights, bishops, rooks, queens, and kings). This required translating the traditional chess rules into code while adapting them for my smaller board size.
 
-Capture Mechanics: I implemented the standard capture rules, but with my special transformation twist where capturing pieces evolve into the type they captured while maintaining their original color.
+- Capture Mechanics: I implemented the standard capture rules, but with my special transformation twist where capturing pieces evolve into the type they captured while maintaining their original color.
 
-Game State Management: I developed systems to track the start state (with randomized piece placement) and end conditions (checkmate, stalemate, or insufficient material).
+- Game State Management: I developed systems to track the start state (with randomized piece placement) and end conditions (checkmate, stalemate, or insufficient material).
 
-Board Structure: Initially, I tested the game on a 3x5 chess board, which provided a compact playing field. However, after several playtests, I found this size too restrictive for interesting strategic play. I've decided to expand to a 4x5 board for my next iteration, which should offer more tactical possibilities while still maintaining a faster pace than traditional chess.
+- Board Structure: Initially, I tested the game on a 3x5 chess board, which provided a compact playing field. However, after several playtests, I found this size too restrictive for interesting strategic play. I've decided to expand to a 4x5 board for my next iteration, which should offer more tactical possibilities while still maintaining a faster pace than traditional chess.
 
 I encountered several technical challenges during implementation, particularly with ensuring all piece movements respected proper chess rules while accounting for the modified board dimensions. The knight's movement pattern, for instance, required special attention to prevent it from moving off the smaller board.
 
