@@ -209,29 +209,30 @@ Our design goals were clear: create a chess variant where traditional captures t
 We initially tested a minimalist 3×3 board with just 1 King, 1 Queen, and 1 Pawn per side. While extremely accessible, this configuration proved too simplistic. Games ended too quickly, often before the RPS mechanic could create any meaningful impact on gameplay. The limited piece selection created few decision points and little strategic depth.
 
 - 3×4 Board Configuration
-[INSERT SCREENSHOT]
+![3x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x4/3v4v1.gif)
 
-Expanding to a 3×4 board with 1 King, 1 Queen, 1 Knight, 1 Rook, and 2 Pawns per side offered more tactical options but still suffered from fundamental issues. Kings were too vulnerable, and while captures happened frequently (good for our RPS mechanic), the game state changed so dramatically with each capture that strategic planning became difficult.
+
+Expanding to a 3×4 board with 1 King, 1 Queen, 1 Knight, 1 Rook, and 2 Pawns per side offered more tactical options but still suffered from fundamental issues. Kings were too vulnerable, and while captures happened frequently (good for our RPS mechanic), the game state changed so dramatically with each capture that strategic planning became difficult. Sometimes the games also ended in weird stalemate positiosn according to regular chess rules
 
 - 4×4 Board Configuration
-[INSERT SCREENSHOT]
+![4x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/4x4/4x4v1.gif)
 
-The 4×4 board with 1 King, 1 Queen, 1 Bishop, 1 Knight, 1 Rook, and 3 Pawns per side showed more promise. This setup provided better spacing and allowed for some interesting tactical combinations. However, powerful pieces like the Queen and Rook still felt overly constrained.
+The 4×4 board with 1 King, 1 Queen, 1 Bishop, 1 Knight, 1 Rook, and 3 Pawns per side showed more promise. This setup provided better spacing and allowed for some interesting tactical combinations. However, powerful pieces like the Queen and Rook still felt overly constrained. Also it was really awkward because the kings would start in check the way I set up the board, so we would really have to break some fundamental chess rules
 
-- 4×5 Board Configuration
-[INSERT SCREENSHOT]
+- 5×4 Board Configuration
+![5x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/5x4/5x4v1.gif)
 
-After multiple tests, our team agreed that the 4×5 board offered the optimal balance for "Rock, Paper, Chess." Using 1 King, 1 Queen, 1 Bishop, 1 Knight, 2 Rooks, and 4 Pawns per side created a game where:
+After multiple tests, our team agreed that the 5×4 board offered the optimal balance for "Rock, Paper, Chess." Using 1 King, 1 Queen, 1 Bishop, 1 Knight, 2 Rooks, and 2 Pawns per side created a game where:
 Captures occurred at a good frequency to trigger our RPS mechanic
 The board provided enough space for meaningful pawn advancement
 Players could develop multi-move strategies
-The RPS mechanic had significant impact without completely dominating gameplay
-Games lasted approximately 10-15 minutes, hitting our target for casual play
+The RPS mechanic had significant impact.
+Games lasted approximately 10-15 minutes (although we might add a timer), hitting our target for casual play. Also as stalemates sometimes occured, I think this helped us come to the conclusion that to decided a stalemate game there will be one final Rock, Paper Scissors game.
 
 - 5×5 Board Configuration
-[INSERT SCREENSHOT]
+5×5 Board Configuration
 
-We also tested a larger 5×5 configuration but found that captures became too infrequent to showcase our RPS mechanic effectively. Games also tended to run longer than our target play time.
+We also tested a larger 5×5 configuration with 1 King, 1 Queen, 1 Bishop, 1 Knight, 1 Rook, and 5 Pawns per side. After researching existing mini-chess variants (including Gardner MiniChess as shown in videos like https://youtu.be/_vkgg-bJ9zc), we found that 5×5 chess can actually become quite advanced and strategically complex. Games on this board size tended to be more positional and multifaceted, with longer decision trees that pushed beyond what we're trying to achieve for this class project. While interesting from a pure chess perspective, this configuration reduced the frequency of captures, making our RPS mechanic less central to the gameplay. Additionally, games lasted significantly longer than our target 10-15 minute play session. Given our goal of creating an accessible, RPS-focused chess variant rather than a deep strategic challenge, we determined that the 5×5 board was less ideal for our specific concept.
 
 - Implementation Progress
 
