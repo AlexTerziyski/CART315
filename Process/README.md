@@ -209,17 +209,20 @@ Our design goals were clear: create a chess variant where traditional captures t
 We initially tested a minimalist 3×3 board with just 1 King, 1 Queen, and 1 Pawn per side. While extremely accessible, this configuration proved too simplistic. Games ended too quickly, often before the RPS mechanic could create any meaningful impact on gameplay. The limited piece selection created few decision points and little strategic depth.
 
 - 3×4 Board Configuration
+
 ![3x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x4/3v4v1.gif)
 
 
 Expanding to a 3×4 board with 1 King, 1 Queen, 1 Knight, 1 Rook, and 2 Pawns per side offered more tactical options but still suffered from fundamental issues. Kings were too vulnerable, and while captures happened frequently (good for our RPS mechanic), the game state changed so dramatically with each capture that strategic planning became difficult. Sometimes the games also ended in weird stalemate positiosn according to regular chess rules
 
 - 4×4 Board Configuration
+
 ![4x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/4x4/4x4v1.gif)
 
 The 4×4 board with 1 King, 1 Queen, 1 Bishop, 1 Knight, 1 Rook, and 3 Pawns per side showed more promise. This setup provided better spacing and allowed for some interesting tactical combinations. However, powerful pieces like the Queen and Rook still felt overly constrained. Also it was really awkward because the kings would start in check the way I set up the board, so we would really have to break some fundamental chess rules
 
 - 5×4 Board Configuration
+
 ![5x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/5x4/5x4v1.gif)
 
 After multiple tests, our team agreed that the 5×4 board offered the optimal balance for "Rock, Paper, Chess." Using 1 King, 1 Queen, 1 Bishop, 1 Knight, 2 Rooks, and 2 Pawns per side created a game where:
