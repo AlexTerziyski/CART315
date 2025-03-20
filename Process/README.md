@@ -190,3 +190,61 @@ For my next iteration, I plan to:
 Here's some photos of the functionality:
 
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype2.png)
+
+# Journal-W08-Iterative Prototyping 3 
+## Iterative Prototyping 3: Design Reflection; March 20th, 2025
+
+This week, our team continued development on "Rock, Paper, Chess," focusing on testing different board configurations to determine the optimal setup before diving into implementation. Using an online chess simulator, we experimented with various board sizes and piece distributions to find the right balance for our unique RPS capture mechanic.
+
+Our design goals were clear: create a chess variant where traditional captures trigger Rock-Paper-Scissors challenges, with winners either completing the capture (if the attacker wins) or reversing positions (if the defender wins). We needed a board that would generate frequent enough captures to make the RPS mechanic relevant while still maintaining enough strategic depth.
+
+- Testing Different Board Configurations
+
+- 3×3 Board Configuration
+![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v1.gif)
+![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v2.gif)
+![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v3.gif)
+
+We initially tested a minimalist 3×3 board with just 1 King, 1 Queen, and 1 Pawn per side. While extremely accessible, this configuration proved too simplistic. Games ended too quickly, often before the RPS mechanic could create any meaningful impact on gameplay. The limited piece selection created few decision points and little strategic depth.
+
+- 3×4 Board Configuration
+[INSERT SCREENSHOT]
+
+Expanding to a 3×4 board with 1 King, 1 Queen, 1 Knight, 1 Rook, and 2 Pawns per side offered more tactical options but still suffered from fundamental issues. Kings were too vulnerable, and while captures happened frequently (good for our RPS mechanic), the game state changed so dramatically with each capture that strategic planning became difficult.
+
+- 4×4 Board Configuration
+[INSERT SCREENSHOT]
+
+The 4×4 board with 1 King, 1 Queen, 1 Bishop, 1 Knight, 1 Rook, and 3 Pawns per side showed more promise. This setup provided better spacing and allowed for some interesting tactical combinations. However, powerful pieces like the Queen and Rook still felt overly constrained.
+
+- 4×5 Board Configuration
+[INSERT SCREENSHOT]
+
+After multiple tests, our team agreed that the 4×5 board offered the optimal balance for "Rock, Paper, Chess." Using 1 King, 1 Queen, 1 Bishop, 1 Knight, 2 Rooks, and 4 Pawns per side created a game where:
+Captures occurred at a good frequency to trigger our RPS mechanic
+The board provided enough space for meaningful pawn advancement
+Players could develop multi-move strategies
+The RPS mechanic had significant impact without completely dominating gameplay
+Games lasted approximately 10-15 minutes, hitting our target for casual play
+
+- 5×5 Board Configuration
+[INSERT SCREENSHOT]
+
+We also tested a larger 5×5 configuration but found that captures became too infrequent to showcase our RPS mechanic effectively. Games also tended to run longer than our target play time.
+
+- Implementation Progress
+
+With our board configuration decided, we began implementing the basic chess movement rules for our chosen 4×5 board size. We've created the foundation for:
+Proper piece movement and highlighting of valid moves
+Basic capture detection that will trigger our RPS challenges
+Check and checkmate detection (which will bypass the RPS system)
+
+The most interesting design challenge has been determining how to handle consecutive RPS wins by the defender. After testing various options, we decided that consecutive defensive wins will continue to give the defender additional turns, creating a potential for dramatic gameplay swings that align with our "unfairly fair" design philosophy.
+
+Next Steps
+
+For our next iteration, we plan to:
+Complete the RPS challenge UI that appears when captures are attempted
+Implement the turn-switching logic based on RPS outcomes
+Add visual and audio feedback to make the consequences of each RPS result clear
+Begin playtesting with users outside our team to gauge initial reactions
