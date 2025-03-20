@@ -210,7 +210,7 @@ We initially tested a minimalist 3×3 board with just 1 King, 1 Queen, and 1 Paw
 
 - 3×4 Board Configuration
 
-![3x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x4/3v4v1.gif)
+![3x4 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x4/3x4v1.gif)
 
 
 Expanding to a 3×4 board with 1 King, 1 Queen, 1 Knight, 1 Rook, and 2 Pawns per side offered more tactical options but still suffered from fundamental issues. Kings were too vulnerable, and while captures happened frequently (good for our RPS mechanic), the game state changed so dramatically with each capture that strategic planning became difficult. Sometimes the games also ended in weird stalemate positiosn according to regular chess rules
