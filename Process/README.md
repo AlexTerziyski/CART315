@@ -201,6 +201,7 @@ Our design goals were clear: create a chess variant where traditional captures t
 - Testing Different Board Configurations
 
 - 3×3 Board Configuration
+
 ![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v1.gif)
 ![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v2.gif)
 ![3x3 Chess Board Configuration](https://github.com/AlexTerziyski/CART315/blob/main/Process/ChessMoves/3x3/3v3v3.gif)
