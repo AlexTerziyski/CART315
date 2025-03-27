@@ -253,3 +253,6 @@ Complete the RPS challenge UI that appears when captures are attempted
 Implement the turn-switching logic based on RPS outcomes
 Add visual and audio feedback to make the consequences of each RPS result clear
 Begin playtesting with users outside our team to gauge initial reactions
+
+# Journal-W09-Iterative Prototyping 4 
+## Iterative Prototyping 4: Design Reflection; March 27th, 2025
