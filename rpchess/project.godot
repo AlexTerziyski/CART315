@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RPChess"
-run/main_scene="uid://mh66yc1gqayd"
+run/main_scene="uid://dyso3rslp44bv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
