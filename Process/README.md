@@ -256,3 +256,16 @@ Begin playtesting with users outside our team to gauge initial reactions
 
 # Journal-W09-Iterative Prototyping 4 
 ## Iterative Prototyping 4: Design Reflection; March 27th, 2025
+
+# Journal-W10-Iterative Prototyping 5 
+## Iterative Prototyping 4: Design Reflection; April 3rd, 2025
+
+This week I've been working extensively with Godot to implement our "Rock, Paper, Chess" concept. I've made decent progress in terms of setting up the chess board and calculating the valid moves for each piece. The board representation is functioning properly, and I've successfully implemented the logic to highlight valid moves when a piece is selected.
+
+However, I've encountered some challenges when trying to implement the actual movement mechanics, captures, and checking functionality. My limited experience with Godot has made these aspects more time-consuming than anticipated, particularly when handling the state changes after moves and ensuring all chess rules are properly enforced. The event system for piece interaction has been especially tricky to get right.
+
+Despite these challenges, I remain confident that I can complete these core mechanics next week. My plan is to focus on finalizing the movement and capture systems, along with implementing proper check detection. Once these foundational chess elements are working correctly, Daniel and I will combine the chess component with the Rock-Paper-Scissors minigame we've been developing separately. This integration will be the final major step in bringing our hybrid game concept to life.
+
+I'm looking forward to seeing how the two gameplay systems interact once fully combined, as this will be the true test of our design hypothesis about making chess more accessible through the RPS mechanic.
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype5.gif)
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype5.png)

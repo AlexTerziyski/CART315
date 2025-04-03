@@ -119,7 +119,7 @@ func get_moves():
 		2: print("knight")
 		3: _moves = get_bishop_moves()
 		4: _moves = get_rook_moves()
-		5: print("queen")
+		5: _moves = get_queen_moves()
 		6: print("king")
 		
 	return _moves
@@ -144,6 +144,24 @@ func get_rook_moves():
 	return _moves
 
 func get_bishop_moves():
+	var _moves = []
+	var directions = [Vector2(0,1), Vector2(0,-1), Vector2(1,0), Vector2(-1,0), Vector2(1,1), Vector2(1,-1), Vector2(-1,1), Vector2(-1,-1)]
+	
+	for i in directions:
+		var pos = selected_piece
+		pos += i
+		while is_valid_position(pos):
+			if is_empty(pos): moves.append(pos)
+			elif is_enemy(pos):
+				_moves.append(pos)
+				break
+			else: break
+			
+			pos += i
+	
+	return _moves
+	
+func get_queen_moves():
 	var _moves = []
 	var directions = [Vector2(1,1), Vector2(1,-1), Vector2(-1,1), Vector2(-1,-1)]
 	
