@@ -42,14 +42,14 @@ const PIECE_MOVE = preload("res://Assets/Piece_move.png")
 #1 = WHITE_PAWN
 
 var board : Array
-var white : bool
-var state: bool
+var white : bool = true
+var state: bool = false
 var moves = []
 var selected_piece : Vector2
 
 func _ready():
 	board.append([4, 2, 3, 5, 6, 3, 2, 4])
-	board.append([1, 1, 1, 1, 1, 1, 1, 1])
+	board.append([0, 0, 0, 0, 0, 0, 0, 0])
 	board.append([0, 0, 0, 0, 0, 0, 0, 0])
 	board.append([0, 0, 0, 0, 0, 0, 0, 0])
 	board.append([0, 0, 0, 0, 0, 0, 0, 0])
@@ -66,8 +66,8 @@ func _input(event):
 			var var1 = snapped(get_global_mouse_position().x, 0) / CELL_WIDTH
 			var var2 = abs(snapped(get_global_mouse_position().y, 0)) / CELL_WIDTH
 			if !state && (white && board[var2][var1] > 0 || !white && board [var2][var1] < 0):
-				show_options()
 				selected_piece = Vector2(var2, var1)
+				show_options()
 				state = true
 
 func is_mouse_out():
@@ -103,13 +103,74 @@ func show_options():
 		state = false
 		return
 	show_dots()
+
 func show_dots():
 	for i in moves:
 		var holder = TEXTURE_HOLDER.instantiate()
 		dots.add_child(holder)
 		holder.texture = PIECE_MOVE
 		holder.global_position = Vector2(i.y * CELL_WIDTH + (CELL_WIDTH/2), -i.x * CELL_WIDTH - (CELL_WIDTH/2))
+
+
 func get_moves():
-	pass
+	var  _moves = []
+	match abs(board[selected_piece.x][selected_piece.y]):
+		1: print("pawn")
+		2: print("knight")
+		3: _moves = get_bishop_moves()
+		4: _moves = get_rook_moves()
+		5: print("queen")
+		6: print("king")
+		
+	return _moves
+
+
+func get_rook_moves():
+	var _moves = []
+	var directions = [Vector2(0,1), Vector2(0,-1), Vector2(1,0), Vector2(-1,0)]
+	
+	for i in directions:
+		var pos = selected_piece
+		pos += i
+		while is_valid_position(pos):
+			if is_empty(pos): moves.append(pos)
+			elif is_enemy(pos):
+				_moves.append(pos)
+				break
+			else: break
+			
+			pos += i
+	
+	return _moves
+
+func get_bishop_moves():
+	var _moves = []
+	var directions = [Vector2(1,1), Vector2(1,-1), Vector2(-1,1), Vector2(-1,-1)]
+	
+	for i in directions:
+		var pos = selected_piece
+		pos += i
+		while is_valid_position(pos):
+			if is_empty(pos): moves.append(pos)
+			elif is_enemy(pos):
+				_moves.append(pos)
+				break
+			else: break
+			
+			pos += i
+	
+	return _moves
+
+func is_valid_position(pos : Vector2):
+	if pos.x >= 0 && pos.x < BOARD_SIZE && pos.y >= 0 && pos.y < BOARD_SIZE: return true
+	return false
+
+func is_empty(pos : Vector2):
+	if board[pos.x][pos.y] == 0: return true
+	return false
+
+func is_enemy(pos : Vector2):
+	if white && board[pos.x][pos.y] < 0 || !white && board[pos.x][pos.y] > 0: return true
+	return false
 
   
