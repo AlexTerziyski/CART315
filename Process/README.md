@@ -282,7 +282,8 @@ This past week marked a significant milestone in our "Rock, Paper, Chess" projec
 
 These scripts work together with two main scenes: game.tscn (the main game scene) and Piece.tscn (the template for all chess pieces).
 
-Throughout this project, I significantly underestimated the technical complexity involved, which limited my progress and led to moments of intense frustration having spent many hours stuck. Trying to combine the theoretical knowledge from the course with practical tutorials proved challenging, especially when adapting existing chess code to accommodate our RPS mechanic. Daniel and I haven't yet fully integrated the Rock-Paper-Scissors component with the chess gameplay, but we've established a solid foundation and are very close to completion.
+Throughout this project, I significantly underestimated the technical complexity involved, which limited my progress and led to moments of intense frustration having spent many hours stuck. Trying to combine the theoretical knowledge from the course with practical tutorials proved challenging 
+(CREDIT - such as these ones: https://www.youtube.com/watch?v=5XQUnHYrUvs&t=54s, https://youtu.be/TBs1DX2xeFY?list=PLd_56bdSJ-tS4-q1gczTdKJhqMep3Ij_w&t=630), especially when adapting existing chess code to accommodate our RPS mechanic. Daniel and I haven't yet fully integrated the Rock-Paper-Scissors component with the chess gameplay, but we've established a solid foundation and are very close to completion.
 
 Despite not reaching our final integration goal within the course timeframe, this project has been invaluable from a design prototyping perspective. It forced us to think carefully about how two distinct game mechanics could interact meaningfully, and the iterative process helped us refine our concept significantly.
 
