@@ -267,5 +267,44 @@ However, I've encountered some challenges when trying to implement the actual mo
 Despite these challenges, I remain confident that I can complete these core mechanics next week. My plan is to focus on finalizing the movement and capture systems, along with implementing proper check detection. Once these foundational chess elements are working correctly, Daniel and I will combine the chess component with the Rock-Paper-Scissors minigame we've been developing separately. This integration will be the final major step in bringing our hybrid game concept to life.
 
 I'm looking forward to seeing how the two gameplay systems interact once fully combined, as this will be the true test of our design hypothesis about making chess more accessible through the RPS mechanic.
+
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype5.gif)
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/IterativePrototype5.png)
+
+# Journal-W11-Final Iterative Prototype
+## Final Iterative Prototype: Design Reflection; April 10th, 2025
+This past week marked a significant milestone in our "Rock, Paper, Chess" project as I finally implemented a functioning chess board with moving pieces and an AI opponent that automatically makes moves. The core system now consists of four main scripts in Godot:
+
+- board.gd: Handles the visual representation of the board, piece placement, and move validation
+- game.gd: Controls game state, player turns, AI moves, and win conditions
+- globals.gd: Defines constants, enumerations, and piece configurations
+- piece.gd: Manages individual piece behavior, movement patterns, and capture mechanics
+
+These scripts work together with two main scenes: game.tscn (the main game scene) and Piece.tscn (the template for all chess pieces).
+
+Throughout this project, I significantly underestimated the technical complexity involved, which limited my progress and led to moments of intense frustration having spent many hours stuck. Trying to combine the theoretical knowledge from the course with practical tutorials proved challenging, especially when adapting existing chess code to accommodate our RPS mechanic. Daniel and I haven't yet fully integrated the Rock-Paper-Scissors component with the chess gameplay, but we've established a solid foundation and are very close to completion.
+
+Despite not reaching our final integration goal within the course timeframe, this project has been invaluable from a design prototyping perspective. It forced us to think carefully about how two distinct game mechanics could interact meaningfully, and the iterative process helped us refine our concept significantly.
+
+What we've achieved:
+A fully functioning chess board with proper piece movement logic
+Drag-and-drop interface for moving pieces
+Legal move validation (including check prevention)
+A simple AI opponent that can make valid random moves
+Pawn promotion mechanics
+Win condition detection
+
+What we're still working on:
+Teleportation of chess pieces when capturing during turn sequences (the core RPS integration)
+Implementing special moves like castling and en passant
+Improving the AI's decision-making
+
+Future plans:
+We're committed to completing this project beyond the class requirements. Our next steps include fully integrating Daniel's RPS component and finalizing the hybrid gameplay. We believe this concept has potential as a unique chess variant that could appeal to both chess enthusiasts and casual players, so we plan to continue refining it for potential release.
+
+The code structure we've developed is modular enough to accommodate our RPS mechanics once fully implemented. For example, when a piece attempts a capture in game.gd, we'll trigger the RPS minigame, and the outcome will determine whether the capture succeeds or results in a position swap. This design allows us to maintain chess's strategic depth while adding an element of chance that makes the game more accessible to players of varying skill levels.
+
+This project has taught me valuable lessons about scope management, the importance of prototyping core mechanics early, and the challenges of blending different game systems. While ambitious, I believe our concept remains sound, and I'm excited to see it through to completion.
+
+Image of gameplay (Black is AI):
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/FinalIterativePrototype.gif)
