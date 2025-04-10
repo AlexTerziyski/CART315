@@ -308,3 +308,6 @@ This project has taught me valuable lessons about scope management, the importan
 
 Image of gameplay (Black is AI):
 ![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/FinalIterativePrototype.gif)
+
+Here are also some of the Game states and Labels that are used to transfer between scenes (x Player Won!, Play again...):
+![alt text](https://github.com/AlexTerziyski/CART315/blob/main/Process/Images/GameStatesandLabels.png)
